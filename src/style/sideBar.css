@@ -1,0 +1,27 @@
+.SideBar{
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  width: 200px;
+  height: 100%;
+  background-color: #eef1f6;
+}
+
+.sub-menu-item .item-title{
+	height: 34px;
+	padding: 15px 0 0 20px;
+	color: #999;
+}
+.sub-menu-item .third-menu-item{
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	color: #48576a;
+	padding: 0 20px;
+	cursor: pointer;
+}
+.sub-menu-item .third-menu-item.is-active, .sub-menu-item .third-menu-item:hover{
+    background-color: #d1dbe5;
+    color: #20a0ff;
+}
