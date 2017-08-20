@@ -1,0 +1,24 @@
+{ "data": [
+  {
+    "name": "Sapphire",
+    "role": 1,
+    "institution": "IB100987",
+    "authority": [1,2,5]
+  },{
+    "name": "李吉吉",
+    "role": 1,
+    "institution": "IH26716",
+    "authority": [2]
+  },{
+    "name": "张思思",
+    "role": 1,
+    "institution": "HB10490",
+    "authority": [2,4,5]
+  },
+  {
+    "name": "刘小凤",
+    "role": 1,
+    "institution": "GB50913",
+    "authority": [5]
+  }
+]}
