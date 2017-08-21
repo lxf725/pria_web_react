@@ -5,7 +5,7 @@ import BankBondQueryAdvice from './bankBondQueryAdvice';
 import ExchangeRepoQueryAdvice from './exchangeRepoQueryAdvice';
 import ExchangeBondQueryAdvice from './exchangeBondQueryAdvice';
 import ExchangeBidQueryAdvice from './exchangeBidQueryAdvice';
-import otherQueryAdvice from './otherQueryAdvice';
+import OtherQueryAdvice from './otherQueryAdvice';
 
 var QueryAdvice = React.createClass({
     getInitialState(){
@@ -45,7 +45,7 @@ var QueryAdvice = React.createClass({
                         <ExchangeBidQueryAdvice />
                     </TabPanel>
                     <TabPanel>
-                        <otherQueryAdvice />
+                        <OtherQueryAdvice />
                     </TabPanel>
                 </Tabs>
             </div>
