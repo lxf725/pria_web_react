@@ -27,7 +27,10 @@
     vertical-align: top;
 }
 .pria-search{
-    min-height: 35px;
+    min-height: 38px;
+}
+.pria-search label{
+    margin-right:5px;
 }
 .pria-filter{
     display: inline-block;

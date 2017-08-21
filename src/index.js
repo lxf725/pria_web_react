@@ -6,6 +6,7 @@ import './style/index.css';
 import './style/reset.css'
 import './style/custom.css'
 import './style/react-table.css'
+import './style/react-tab.css'
 
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
