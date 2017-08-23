@@ -5,7 +5,7 @@ import BankBondEntryAdvice from './bankBondEntryAdvice';
 import ExchangeRepoEntryAdvice from './exchangeRepoEntryAdvice';
 import ExchangeBondEntryAdvice from './exchangeBondEntryAdvice';
 import ExchangeBidEntryAdvice from './exchangeBidEntryAdvice';
-import otherEntryAdvice from './otherEntryAdvice';
+import OtherEntryAdvice from './otherEntryAdvice';
 
 var EntryAdvice = React.createClass({
     getInitialState(){
@@ -45,7 +45,7 @@ var EntryAdvice = React.createClass({
                         <ExchangeBidEntryAdvice />
                     </TabPanel>
                     <TabPanel>
-                        <otherEntryAdvice />
+                        <OtherEntryAdvice />
                     </TabPanel>
                 </Tabs>
             </div>

@@ -28,9 +28,21 @@
 }
 .pria-search{
     min-height: 38px;
+    line-height: 38px;
+    background-color: #dde6e9;
 }
 .pria-search label{
     margin-right:5px;
+}
+.pria-search input, .pria-search select{
+    height:28px;
+    border-radius: 3px;
+    border:1px solid #ddd;
+    min-width: 100px;
+    text-indent: 5px;
+}
+.pria-search button{
+
 }
 .pria-filter{
     display: inline-block;
@@ -39,3 +51,40 @@
 .pria-table-wrapper {
     clear: both;
 }
+.pria-form-radio input[type="radio"] {
+    margin-top: 3px;
+}
+.pria-textarea{
+    resize: none;
+    height: 50px;
+}
+.pria-btn-add{
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    background-color: #3c763d;
+    border: none;
+    color: #fff;
+    margin-left: 5px;
+    padding: 0;
+}
+.pria-input-number{
+    width: 80px !important;
+}
+.pria-buttons{
+    text-align: center;
+}
+.pria-buttons button{
+    margin-right: 10px;
+}
+
+.form-inline .row .form-group{
+    margin-bottom:10px;
+}
+.form-inline .row .form-group .control-label{
+    text-align: right;
+    margin-right:10px;
+    width:85px;
+}
+

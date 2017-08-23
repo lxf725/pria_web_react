@@ -11,17 +11,17 @@ var UserManage = React.createClass({
     },
     render() {
         const columns = [{
-            Header: '姓名',
-            accessor: 'name'
+            Header: '账户名',
+            accessor: 'accountName'
         },{
-            Header: '年龄',
-            accessor: 'age'
+            Header: '角色',
+            accessor: 'role'
         },{
-            Header: '朋友',
-            accessor: 'friendName'
+            Header: '机构',
+            accessor: 'institution'
         },{
-            Header: '朋友年龄',
-            accessor: 'friendAge'
+            Header: '权限',
+            accessor: 'authority'
         },{
             Header: '操作',
             accessor: 'options',

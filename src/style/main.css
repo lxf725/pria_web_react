@@ -2,10 +2,5 @@
 	/*text-align: center;*/
 	margin-left: 10px;
 }
-input, select, textarea{
-	height:28px;
-	border-radius: 3px;
-	border:1px solid #ddd;
-	min-width: 100px;
-	text-indent: 5px;
-}
+
+

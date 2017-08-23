@@ -6,7 +6,7 @@ export default class About extends Component {
             <div>
                 <h3>PRIA_WEB_REACT</h3>
                 <p>
-                    Connect: Sapphire
+                    Connect: SapphireLv 990256287@qq.coms
                 </p>
             </div>
         )

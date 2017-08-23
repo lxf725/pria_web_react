@@ -12,18 +12,14 @@ var RoleManage = React.createClass({
     },
     render() {
         const columns = [{
-            Header: '姓名',
-            accessor: 'name',
-        },{
             Header: '角色',
             accessor: 'role',
         },{
+            Header: '账户名',
+            accessor: 'accountName',
+        },{
             Header: '机构',
             accessor: 'institution',
-        },{
-            Header: '权限',
-            accessor: 'authority',
-            Cell: () => <div></div>
         },{
             Header: '操作',
             accessor: 'options',
