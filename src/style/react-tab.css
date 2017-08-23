@@ -9,7 +9,7 @@
     display: inline-block;
     border: 1px solid transparent;
     border-bottom: none;
-    color: #008DE7;
+    color: #f28d4d;
     position: relative;
     list-style: none;
     padding: 6px 12px;
@@ -20,14 +20,14 @@
 }
 
 .react-tabs [role=tab][aria-selected=true] {
-    background-color: #008DE7;
-    border-color: #008DE7;
+    background-color: #f28d4d;
+    border-color: #f28d4d;
     color:#fff;
 }
 
 .react-tabs [role=tab]:focus {
-    box-shadow: 0 0 5px hsl(208, 99%, 50%);
-    border-color: hsl(208, 99%, 50%);
+    box-shadow: 0 0 5px #f28d4d;
+    border-color: #f28d4d;
     outline: none;
 }
 

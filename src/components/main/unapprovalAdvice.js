@@ -47,7 +47,7 @@ var UnapprovalAdvice = React.createClass({
                         <label>交易时间</label>
                         <input type="text" />
                     </div>
-                    <button className="pria-btn pria-btn-small">查询</button>
+                    <button className="btn btn-info pria-btn-small">查询</button>
                 </div>
                 <div className="pria-table-wrapper">
                     <ReactTable

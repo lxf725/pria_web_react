@@ -79,7 +79,7 @@ var ProductManage = React.createClass({
         return (
             <div>
                 <h5>产品列表</h5>
-                <div className="pria-search">
+                <div className="pria-search pria-single">
                     <div className="pria-filter">
                         <label>产品名称</label>
                         <select>
@@ -94,10 +94,10 @@ var ProductManage = React.createClass({
                         <label>产品代码</label>
                         <input type="text" />
                     </div>
-                    <button className="pria-btn pria-btn-small">查询</button>
+                    <button className="btn btn-info pria-btn-small">查询</button>
                 </div>
 
-                <div className="pria-table-wrapper">
+                <div className="pria-table-wrapper pria-single">
                     <ReactTable
                         data={this.state.resourceData}
                         pages={3}
@@ -132,11 +132,15 @@ var ProductManage = React.createClass({
                         }}
                     />
                 </div>
+                <div className="pria-buttons">
+                    <button className="btn btn-danger">新增产品</button>
+                </div>
+
             </div>
         )
     }
 });
 
-export default  ProductManage;
+export default ProductManage;
 
 

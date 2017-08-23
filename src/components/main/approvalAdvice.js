@@ -20,6 +20,9 @@ export default class ApprovalAdvice extends Component {
                         <ApprovaledAdvice />
                     </TabPanel>
                 </Tabs>
+                <div className="pria-buttons">
+                    <button className="btn btn-danger">投资建议审批</button>
+                </div>
             </div>
         )
     }

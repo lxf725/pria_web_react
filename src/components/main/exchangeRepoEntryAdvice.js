@@ -100,12 +100,12 @@ var ExchangeRepoEntryAdvice = React.createClass({
                         <FormGroup className="col-lg-3">
                             <ControlLabel>折扣率</ControlLabel>
                             <FormControl type="text" className="pria-input-number"/>
-                            <Button onClick={this.addPledgeBond} className="pria-btn-add">+</Button>
-                            <Button onClick={this.releasePledgeBond} className="pria-btn-add">-</Button>
+                            <Button onClick={this.addPledgeBond} className="btn btn-primary pria-btn-add">+</Button>
+                            <Button onClick={this.releasePledgeBond} className="btn btn-danger pria-btn-add">-</Button>
                         </FormGroup>
                     </Row>
                     <Row className="pria-buttons">
-                        <Button className="btn btn-info">取消</Button>
+                        <Button className="btn btn-warning">取消</Button>
                         <Button className="btn btn-success">确定</Button>
                     </Row>
                 </form>

@@ -62,7 +62,9 @@ var RoleManage = React.createClass({
                         });
                     }}
                 />
-
+                <div className="pria-buttons">
+                    <button className="btn btn-danger">新增角色</button>
+                </div>
                 <DatePicker dateFormat="MM-DD-YY"
                             dayLabels={this.state.dayLabels}
                             monthLabels={this.state.monthLabels}

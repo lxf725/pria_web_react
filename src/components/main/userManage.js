@@ -37,6 +37,7 @@ var UserManage = React.createClass({
         return (
             <div className="pria-wrapper">
                 <h5>用户列表</h5>
+                { /*TODO 账户树*/ }
                 <ReactTable
                     data={this.state.resourceData}
                     pages={3}
@@ -83,6 +84,9 @@ var UserManage = React.createClass({
                         })*/
                     }}
                 />
+                <div className="pria-buttons">
+                    <button className="btn btn-danger">新增用户</button>
+                </div>
             </div>
         )
     }

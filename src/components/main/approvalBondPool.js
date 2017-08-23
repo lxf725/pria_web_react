@@ -43,7 +43,7 @@ var ApprovalBondPool = React.createClass({
         return (
             <div>
                 <h5>债券池审批页面</h5>
-                <div className="pria-search">
+                <div className="pria-search pria-single">
                     <div className="pria-filter">
                         <label>发行人</label>
                         <input type="text" />
@@ -54,10 +54,10 @@ var ApprovalBondPool = React.createClass({
                             <option>请选择</option>
                         </select>
                     </div>
-                    <button className="pria-btn pria-btn-small">查询</button>
+                    <button className="btn btn-info pria-btn-small">查询</button>
                 </div>
 
-                <div className="pria-table-wrapper">
+                <div className="pria-table-wrapper pria-single">
                     <ReactTable
                         data={this.state.resourceData}
                         pages={3}
@@ -91,6 +91,9 @@ var ApprovalBondPool = React.createClass({
 
                         }}
                     />
+                    <div className="pria-buttons">
+                        <button className="btn btn-danger">审批</button>
+                    </div>
                 </div>
             </div>
         )

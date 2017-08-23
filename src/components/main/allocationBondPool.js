@@ -33,6 +33,11 @@ var AllocationBondPool = React.createClass({
                         <AllocationAbsBondPool />
                     </TabPanel>
                 </Tabs>
+                <div className="pria-buttons">
+                    <button className="btn btn-danger">新增债券池</button>
+                    <button className="btn btn-warning">提交并入池</button>
+                    <button className="btn btn-primary">删除并出池</button>
+                </div>
             </div>
         )
     }

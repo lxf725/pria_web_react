@@ -11,31 +11,33 @@
 .pria-table-header{
     text-align: center;
 }
+.pria-wrapper {
+    margin-left: 10px;
+}
 .pria-table-column{
     text-align: center;
 }
 .pria-btn{
-    background-color: #008DE7;
     border-radius: 3px;
     color: #fff;
     border: none;
     cursor: pointer;
+    height: 28px;
 }
 .pria-btn-small{
     width: 60px;
+    line-height: 1;
     height: 28px;
-    vertical-align: top;
 }
 .pria-search{
     min-height: 38px;
-    line-height: 38px;
-    background-color: #dde6e9;
 }
 .pria-search label{
     margin-right:5px;
 }
 .pria-search input, .pria-search select{
     height:28px;
+    line-height: 28px;
     border-radius: 3px;
     border:1px solid #ddd;
     min-width: 100px;
@@ -61,24 +63,35 @@
 .pria-btn-add{
     width: 20px;
     height: 20px;
-    line-height: 20px;
+    line-height: 1;
     text-align: center;
-    background-color: #3c763d;
     border: none;
     color: #fff;
     margin-left: 5px;
-    padding: 0;
+    padding: 0 !important;
 }
 .pria-input-number{
     width: 80px !important;
 }
 .pria-buttons{
     text-align: center;
+    margin-bottom: 10px;
 }
 .pria-buttons button{
     margin-right: 10px;
+    margin-top: 10px;
 }
 
+.main h5{
+    margin-left: 10px;
+}
+.main h4{
+    line-height: 1;
+    padding-bottom: 10px;
+}
+.main .react-tabs{
+    margin-left: 10px;
+}
 .form-inline .row .form-group{
     margin-bottom:10px;
 }
@@ -87,4 +100,15 @@
     margin-right:10px;
     width:85px;
 }
+.form-control{
+    height:30px;
+    padding: 0;
+    text-indent: 5px;
+}
+.btn{
+    padding: 4px 16px;
+}
 
+.pria-single{
+    margin-left:10px;
+}

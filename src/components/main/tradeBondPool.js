@@ -34,12 +34,15 @@ var TradeBondPool = React.createClass({
                         <AbsBondPool />
                     </TabPanel>
                 </Tabs>
+                <div className="pria-buttons">
+                    <button className="btn btn-danger">批量导入</button>
+                </div>
             </div>
         )
     }
 });
 
-export default  TradeBondPool;
+export default TradeBondPool;
 
 
 

@@ -83,7 +83,7 @@ var ExchangeBidEntryAdvice = React.createClass({
                         </FormGroup>
                     </Row>
                     <Row className="pria-buttons">
-                        <Button className="btn btn-info">取消</Button>
+                        <Button className="btn btn-warning">取消</Button>
                         <Button className="btn btn-success">确定</Button>
                     </Row>
                 </form>

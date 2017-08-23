@@ -63,7 +63,7 @@ var BankBondQueryAdvice = React.createClass({
                         {/* TODO */}
                         <input type="text" />
                     </div>
-                    <button className="pria-btn pria-btn-small">查询</button>
+                    <button className="btn btn-info pria-btn-small">查询</button>
                 </div>
                 <div className="pria-table-wrapper">
                     <ReactTable

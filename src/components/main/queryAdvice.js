@@ -48,12 +48,17 @@ var QueryAdvice = React.createClass({
                         <OtherQueryAdvice />
                     </TabPanel>
                 </Tabs>
+                <div className="pria-buttons">
+                    <button className="btn btn-danger">新增</button>
+                    <button className="btn btn-warning">修改</button>
+                    <button className="btn btn-primary">删除</button>
+                </div>
             </div>
         )
     }
 });
 
-export default  QueryAdvice;
+export default QueryAdvice;
 
 
 

@@ -73,7 +73,7 @@ var ProhibitBondPool = React.createClass({
         return (
             <div>
                 <h5>禁止池页面</h5>
-                <div className="pria-search">
+                <div className="pria-search pria-single">
                     <div className="pria-filter">
                         <label>产品名称</label>
                         <select>
@@ -96,10 +96,10 @@ var ProhibitBondPool = React.createClass({
                             <option>请选择</option>
                         </select>
                     </div>
-                    <button className="pria-btn pria-btn-small">查询</button>
+                    <button className="btn btn-info pria-btn-small">查询</button>
                 </div>
 
-                <div className="pria-table-wrapper">
+                <div className="pria-table-wrapper pria-single">
                     <ReactTable
                         data={this.state.resourceData}
                         pages={3}
@@ -133,13 +133,16 @@ var ProhibitBondPool = React.createClass({
 
                         }}
                     />
+                    <div className="pria-buttons">
+                        <button className="btn btn-danger">批量导入</button>
+                    </div>
                 </div>
             </div>
         )
     }
 });
 
-export default  ProhibitBondPool;
+export default ProhibitBondPool;
 
 
 
