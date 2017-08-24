@@ -1,6 +1,3 @@
-/**
- * Created by dbkong on 2017/6/6.
- */
 import React from 'react';
 import {
     BrowserRouter as Router,
@@ -8,6 +5,7 @@ import {
     Switch,
 } from 'react-router-dom';
 import routes from './router.config';
+
 const Routers = () => (
     <Router>
         <Switch>

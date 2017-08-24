@@ -7,6 +7,7 @@ import Routes from './router/Routers'
 import TopBar from './components/commont/topBar'
 import SideBar from './components/commont/sideBar'
 import Loading from './components/commont/loading'
+import Footer from './components/commont/footer';
 import lightBaseTheme from "material-ui/styles/baseThemes/lightBaseTheme";
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import './style/app.css';
@@ -63,7 +64,6 @@ const navList = [{
 store.dispatch(setNavList(navList));
 
 class App extends Component {
-
     /*material-ui 需要配置主题才可以使用*/
     getChildContext() {
         return { muiTheme: getMuiTheme(lightBaseTheme) };
@@ -77,9 +77,10 @@ class App extends Component {
                     <SideBar />
                     <div className="main">
                         <Loading />
-                        <Routes />          
+                        <Routes />
                     </div>
-                </div>        
+                    <Footer />
+                </div>
             </Provider>
         );
     }
