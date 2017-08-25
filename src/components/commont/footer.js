@@ -8,7 +8,7 @@ class Footer extends Component {
     render() {
         return(
             <div className='pria-footer'>
-                <p><span>© 大小证券有限公司</span></p>
+                <p><span>© 光大证券有限公司</span></p>
             </div>
         )
     }

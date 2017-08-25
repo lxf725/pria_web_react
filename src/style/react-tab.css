@@ -21,7 +21,9 @@
 
 .react-tabs [role=tab][aria-selected=true] {
     background-color: #f28d4d;
+    box-shadow: 0 0 5px #f28d4d;
     border-color: #f28d4d;
+    transition: 500ms;
     color:#fff;
 }
 

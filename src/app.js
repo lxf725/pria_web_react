@@ -2,14 +2,17 @@ import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 import { Provider } from 'react-redux';
 import store from './redux/store';
-import { setNavList }  from './redux/action'
-import Routes from './router/Routers'
-import TopBar from './components/commont/topBar'
-import SideBar from './components/commont/sideBar'
-import Loading from './components/commont/loading'
+import { setNavList }  from './redux/action';
+import Routes from './router/Routers';
+import {  BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import TopBar from './components/commont/topBar';
+import SideBar from './components/commont/sideBar';
+import Loading from './components/commont/loading';
 import Footer from './components/commont/footer';
 import lightBaseTheme from "material-ui/styles/baseThemes/lightBaseTheme";
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import Login from './login';
+import auth from './components/commont/auth';
 import './style/app.css';
 
 const navList = [{
@@ -63,24 +66,58 @@ const navList = [{
 
 store.dispatch(setNavList(navList));
 
+function requireAuth(nextState, replace) {
+    if (!auth.loggedIn()) {
+        replace({
+            pathname: '/login',
+            state: { nextPathname: nextState.location.pathname }
+        })
+    }
+}
 class App extends Component {
     /*material-ui 需要配置主题才可以使用*/
+    constructor(props) {
+        super(props);
+        this.state = {
+            loggedIn: auth.loggedIn()
+        };
+        console.log('-+--+++++++++++++++++++++------------------');
+        console.log(store);
+        //this.updateAuth = this.updateAuth.bind(this)
+    }
+    /*updateAuth(loggedIn) {
+        this.setState({
+            loggedIn: !!loggedIn
+        })
+    }
+
+    componentWillMount() {
+        auth.onChange = this.updateAuth
+        auth.login()
+    }
+
     getChildContext() {
         return { muiTheme: getMuiTheme(lightBaseTheme) };
-    }
+    }*/
 
     render() {
         return (
             <Provider store={store}>
-                <div className="App">
-                    <TopBar />
-                    <SideBar />
-                    <div className="main">
-                        <Loading />
-                        <Routes />
+                { !this.state.loggedIn ? (
+                    <div className="Login">
+                        <Login />
                     </div>
-                    <Footer />
-                </div>
+                ) : (
+                    <div className="App">
+                        <TopBar />
+                        <SideBar />
+                        <div className="main">
+                            <Loading />
+                            <Routes />
+                        </div>
+                        <Footer />
+                    </div>
+                )}
             </Provider>
         );
     }

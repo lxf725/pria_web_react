@@ -1,22 +1,22 @@
 import React from 'react';
+import {withRouter} from 'react-router';
+import auth from './components/commont/auth.js';
+import './style/bootstrap.css'
 
-var LoginForm = React.createClass({
-    getInitialState () {
+const Login = React.createClass({
+    getInitialState() {
         return {
+            error: false,
             username: '',
             password: '',
-        };
+        }
     },
-    handleChange (e) {
-        var newState = {};
-        newState[e.target.name] = e.target.value;
-        this.setState(newState);
-    },
-    handleClick () {
 
-    },
-    onSubmit (e) {
-        e.preventDefault();
+    handleSubmit(event) {
+        event.preventDefault()
+
+        const email = this.refs.email.value
+        const pass = this.refs.pass.value
         var data = {
             username : this.state.username,
             password : this.state.password,
@@ -36,26 +36,47 @@ var LoginForm = React.createClass({
         .catch((error) => {
             console.error(error);
         });
+
+        auth.login(email, pass, (loggedIn) => {
+            if (!loggedIn) return this.setState({error: true});
+
+            const {location} = this.props;
+
+            /*if (location.state && location.state.nextPathname) {
+                this.props.router.replace(location.state.nextPathname)
+            } else {
+                this.props.router.replace('/')
+            }*/
+        })
     },
+
     render() {
         return (
             <div className="loginForm">
-                <form action="" onSubmit={this.onSubmit}>
+                <form className="form-inline" onSubmit={this.handleSubmit}>
                     <div className="form-group">
-                        <label>账户</label>
-                        <input type="text" value={this.state.username} placeholder="请输入账户名" onChange={this.handleChange} />
+                        <label className="">账户</label>
+                        <input type="text" className="form-control" value={this.state.username} placeholder="请输入账户名"
+                               onChange={this.handleChange}/>
                     </div>
+                    <br/>
                     <div className="form-group">
-                        <label>密码</label>
-                        <input type="password" value={this.state.password} placeholder="请输入密码" onChange={this.handleChange} />
+                        <label className="">密码</label>
+                        <input type="password" className="form-control" value={this.state.password} placeholder="请输入密码"
+                               onChange={this.handleChange}/>
                     </div>
+                    <br/>
                     <div className="form-group">
-                        <buttom className="btn btn-danger">确定</buttom>
+                        <buttom className="btn btn-danger" onClick={this.onSubmit}>确定</buttom>
+                        {this.state.error && (
+                            <p>登录失败，请检查您的用户名或者密码！</p>
+                        )}
                     </div>
                 </form>
             </div>
-        );
+        )
     }
-});
 
-export default LoginForm;
+})
+
+export default Login;

@@ -10,6 +10,7 @@ import ApprovalBondPool from '../components/main/approvalBondPool';
 import QueryAdvice from '../components/main/queryAdvice';
 import ApprovalAdvice from '../components/main/approvalAdvice';
 import EntryAdvice from '../components/main/entryAdvice';
+import Login from '../login';
 
 const routes = [
 	{
@@ -58,7 +59,9 @@ const routes = [
         exact: true,
     },{
 		component: Main
-	}
+	},{
+        component: Login
+    }
 ]
 
 export default routes;
