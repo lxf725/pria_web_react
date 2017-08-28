@@ -11,16 +11,16 @@ class Main extends Component {
         var myChart = echarts.init(document.getElementById('main'));
         // 绘制图表
         myChart.setOption({
-            title: { text: 'ECharts 入门示例' },
+            title: { text: '证券公司基金总额' },
             tooltip: {},
             xAxis: {
-                data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
+                data: ["德邦", "华创", "国君", "光大", "华信", "华菁"]
             },
             yAxis: {},
             series: [{
-                name: '销量',
+                name: '资金总额',
                 type: 'bar',
-                data: [5, 20, 36, 10, 10, 20]
+                data: [5.8, 20.23, 36.9, 10.6, 10.7, 20.2]
             }]
         });
     }
@@ -28,7 +28,7 @@ class Main extends Component {
     render() {
         return (
             <div>
-                <div id="main" style={{ width: 1000, height: 800 }}></div>
+                <div id="main" style={{ width: 1000, height: 700, marginLeft: 10, marginTop: 10}}></div>
             </div>
         )
     }
