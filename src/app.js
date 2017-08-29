@@ -103,7 +103,7 @@ class App extends Component {
     render() {
         return (
             <Provider store={store}>
-                { !this.state.loggedIn ? (
+                { this.state.loggedIn ? (
                     <div className="Login">
                         <Login />
                     </div>
