@@ -11,15 +11,20 @@ const Login = React.createClass({
             password: '',
         }
     },
+    // handleChange() {
+    //     this.setState({
+    //         username: this.state.username,
+    //         password: this.state.password
+    // }),
 
     handleSubmit(event) {
-        event.preventDefault()
+        event.preventDefault();
 
-        const email = this.refs.email.value
-        const pass = this.refs.pass.value
+        const email = this.refs.email.value;
+        const pass = this.refs.pass.value;
         var data = {
             username : this.state.username,
-            password : this.state.password,
+            password : this.state.password
         };
         fetch('http://59.110.240.155:3000/login', {
             method: 'POST',
@@ -56,14 +61,14 @@ const Login = React.createClass({
                 <form className="form-inline" onSubmit={this.handleSubmit}>
                     <div className="form-group">
                         <label className="">账户</label>
-                        <input type="text" className="form-control" value={this.state.username} placeholder="请输入账户名"
-                               onChange={this.handleChange}/>
+                        <input type="text" className="form-control" defaultValue={this.state.username} placeholder="请输入账户名"
+                               onChange={this.handleChange} />
                     </div>
                     <br/>
                     <div className="form-group">
                         <label className="">密码</label>
-                        <input type="password" className="form-control" value={this.state.password} placeholder="请输入密码"
-                               onChange={this.handleChange}/>
+                        <input type="password" className="form-control" defaultValue={this.state.password} placeholder="请输入密码"
+                               onChange={this.handleChange} />
                     </div>
                     <br/>
                     <div className="form-group">
@@ -77,6 +82,6 @@ const Login = React.createClass({
         )
     }
 
-})
+});
 
 export default Login;
